@@ -1,5 +1,5 @@
 [package]
 
-name = "nonrepeated_character"
+name = "first_nonrepeated_character"
 version = "0.0.1"
 authors = ["Sean Chen <skypemaster007@gmail.com>"]
