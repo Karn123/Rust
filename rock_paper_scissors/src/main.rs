@@ -19,8 +19,8 @@ fn main() {
 
 fn rock_paper_scissors(rounds: uint) -> Vec<Vec<&'static str>> {
   let plays = ["rock", "paper", "scissors"];
-  let mut outcomes: Vec<Vec<&'static str>> = vec![];
-  let mut played_so_far: Vec<&'static str> = vec![];
+  let mut outcomes: Vec<Vec<&'static str>> = Vec::new();
+  let mut played_so_far: Vec<&'static str> = Vec::new();
   fn combos(rounds_to_go: uint, outcomes: &mut Vec<Vec<&'static str>>, played_so_far: &mut Vec<&'static str>, plays: [&'static str, ..3]) {
     if rounds_to_go == 0 {
       outcomes.push(played_so_far.clone());

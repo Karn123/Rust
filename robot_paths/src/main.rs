@@ -1,3 +1,3 @@
-fn main() {
-    println!("Hello, world!")
+fn robot_paths(n: i32) -> uint {
+  
 }
