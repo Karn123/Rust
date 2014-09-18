@@ -3,9 +3,10 @@ fn make_vector_from_string(input: &'static str) -> Vec<char> {
   for c in input.chars() {
     vec.push(c);
   }
+  vec
 }
 
-fn is_palindrome(input: &Vec<char>, i: int, j: int) -> Option<String> {
+fn is_palindrome(input: &Vec<char>, i: int, j: int) -> String {
   let length: uint = input.len();
   let mut left = i;
   let mut right = j;
@@ -15,6 +16,7 @@ fn is_palindrome(input: &Vec<char>, i: int, j: int) -> Option<String> {
   }
   let substring = input.slice(left as uint, right as uint);
   let s = String::from_chars(substring);
+  s
 }
 
 fn longest_palindrome(input: &'static str) -> String {
