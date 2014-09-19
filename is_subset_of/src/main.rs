@@ -19,25 +19,31 @@ fn is_subset_of<T: Eq + Hash>(first_arr: &[T], second_arr: &[T]) -> bool {
 }
 
 #[test]
-fn test_one() {
+fn is_not_a_subset_of_strings() {
   let result = is_subset_of(["commit", "push"], ["rebase", "blame", "origin", "master"]);
   assert_eq!(result, false);
 }
 
 #[test]
-fn test_two() {
+fn is_a_subset_of_strings() {
   let result = is_subset_of(["commit", "push"], ["rebase", "blame", "origin", "master", "push", "commit"]);
   assert_eq!(result, true);
 }
 
 #[test]
-fn test_three() {
+fn is_not_a_subset_of_strings_for_smaller_second_arrays() {
   let result = is_subset_of(["commit", "push"], ["commit"]);
   assert_eq!(result, false);
 }
 
 #[test]
-fn test_four() {
+fn is_a_subset_of_uints() {
   let result = is_subset_of([1u, 2, 3], [3u, 4, 1, 2]);
   assert_eq!(result, true);
+}
+
+#[test]
+fn is_not_a_subset_of_uints() {
+  let result = is_subset_of([1u, 2, 3], [4u, 5, 6]);
+  assert_eq!(result, false);
 }
