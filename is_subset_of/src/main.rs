@@ -6,7 +6,7 @@ fn main() {
 }
 
 fn is_subset_of<T: Eq + Hash>(first_arr: &[T], second_arr: &[T]) -> bool {
-  let mut set: HashSet<&T> = HashSet::new();
+  let mut set = HashSet::new();
   for i in second_arr.iter() {
     set.insert(i);
   }
